@@ -15,6 +15,7 @@ const Mainsection = () => {
           <h1 className=" md:text-5xl text-2xl font-bold text-white md:!leading-[60px]">
             The leading B2B ecommerce platform for global trade
           </h1>
+
           <p className="text-white mt-8 md:text-xl text-base font-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
             voluptas? Quas vero saepe mollitia quam provident dicta, impedit,

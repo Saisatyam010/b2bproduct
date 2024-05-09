@@ -1,0 +1,41 @@
+.slick-prev:before,
+.slick-next:before {
+  opacity: 1;
+  background-color: #E6E6E6 !important;
+  padding: 8px;
+  fill: #390E44 !important;
+  border-radius: 100%;
+}
+
+.slick-prev:before {
+  content: url("/public/prevIcon.svg");
+}
+.slick-next:before {
+  content: url("/public/nextIcon.svg");
+}
+.slick-prev {
+  left: 10px !important;
+  z-index: 100 !important;
+}
+.slick-next {
+  right: 15px !important;
+  z-index: 100 !important;
+}
+
+.slick-dots li.slick-active button:before{
+  color: #fff !important;
+}
+
+.slick-dots{
+  bottom: 25px !important;
+}
+.slick-dots li button:before{
+  font-size: 10px !important;
+  opacity: 1 !important;
+  color: #fff !important;
+}
+.slick-dots li{
+  margin: 0 !important;
+  opacity: 1 !important;
+  color: #fff !important;
+}

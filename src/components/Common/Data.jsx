@@ -1,13 +1,14 @@
+import { FaStore } from "react-icons/fa6";
 import { IoSearchSharp } from "react-icons/io5";
+import { MdAddShoppingCart, MdOutlineInventory2 } from "react-icons/md";
+import { RiHome2Line } from "react-icons/ri";
+import Inventroyimg from "../../assets/images/inventorypro.png";
 import {
   AllCategory,
   CardIcon,
   EaseIcon,
   SearchResultIcon,
-  SellerSidebarAddproduct,
   SellerSidebarHelp,
-  SellerSidebarHome,
-  SellerSidebarOrders,
   SellerSidebarTransaction,
   TickIcon,
 } from "./Icons";
@@ -352,17 +353,22 @@ export const SellerSidebar = [
   {
     routeName: "Home",
     link: "/seller",
-    icon: <SellerSidebarHome />,
+    icon: <RiHome2Line size={26} />,
   },
   {
     routeName: "Add Product",
     link: "/seller/selectcategory",
-    icon: <SellerSidebarAddproduct />,
+    icon: <MdAddShoppingCart size={26} />,
   },
   {
     routeName: "My Store",
     link: "/seller/mystore",
-    icon: <SellerSidebarOrders />,
+    icon: <FaStore size={26} />,
+  },
+  {
+    routeName: "Inventory",
+    link: "/seller/inventory",
+    icon: <MdOutlineInventory2 size={26} />,
   },
   {
     routeName: "Transaction",
@@ -536,3 +542,248 @@ export const SellerProductData = [
 ];
 
 export const SellerSizes = ["XS", "S", "M", "L", "XL", "XXL"];
+
+export const SellerInventoryTableHead = [
+  {
+    heading: "Status",
+  },
+  {
+    heading: "Image",
+  },
+  {
+    heading: "SKU",
+  },
+  {
+    heading: "Product Name",
+  },
+  {
+    heading: "Date Created",
+  },
+  {
+    heading: "Stock",
+  },
+  {
+    heading: "Price & Range cost",
+  },
+  {
+    heading: "Save all",
+  },
+];
+
+export const SellerInventoryBodyData = [
+  {
+    status: "Active",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+  {
+    status: "Active",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+  {
+    status: "Active",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+  {
+    status: "Active",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+  {
+    status: "Inactive",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+  {
+    status: "Inactive",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+  {
+    status: "Inactive",
+    img: Inventroyimg,
+    SKU: "SONALI_HOODIE_WEAR",
+    productName:
+      "Men’s best collection for winters , Winter Hoodie with vast colors and sizes",
+    dateCreated: "01/05/2024",
+    time: "12:43",
+    stock: 2367,
+  },
+];
+
+export const CategoryModalMainCategory = [
+  "Home Decore",
+  "Fashion & Beauty",
+  "Health & personal care",
+  "Fashion & Beauty",
+  "Fashion & Beauty",
+];
+
+export const CategoryModalSubCategory = [
+  {
+    mainCategory: "Luggage, Bags & cases",
+    subCategory: [
+      "Best of Beauty",
+      "Backpacks",
+      "Luggage & Travel Bags ",
+      "Women’s Bags ",
+      "Men’s Bags",
+      "Bussiness Bags ",
+      "Cases Wallets & Holders ",
+      "Lifestyle Bags ",
+      "Men’s Bags ",
+      "Sports Bags & Cases ",
+      "Lifestyle Bags ",
+      "Lifestyle Bags ",
+      "Sports Bags & Cases ",
+      "Men’s Bags",
+    ],
+  },
+  {
+    mainCategory: "Packing & printing",
+    subCategory: [
+      "Glass Packaging ",
+      "Paper Packaging ",
+      "Packaging & printing Service ",
+      "Plastic Packaging ",
+      "Metal Packaging  ",
+      "Packaging Raw Materials ",
+      "Logistic Packaging ",
+      "Pharmaceutical Packaging ",
+      "Textile Packaging ",
+      "Wooden & Bamboo Packing ",
+      "Printing Materials",
+    ],
+  },
+  {
+    mainCategory: "Beauty",
+    subCategory: [
+      "Care & tools(facial) ",
+      "Nail Supplies ",
+      "Hair extensions & wigs ",
+      "Makeup & tools ",
+      "Body art ",
+      "Beauty Equipment ",
+      "Perfume & fragnance ",
+      "Mini size & gift sets ",
+      "Eyelash Beauty & tools ",
+      "Aesthetic medicine  ",
+      "Fragnance  ",
+      "Nail Supplies ",
+      "Makeup & tools ",
+    ],
+  },
+  {
+    mainCategory: "Shoes & Accessories",
+    subCategory: [
+      "Men’s Shoe ",
+      "Shoe part & Accessories ",
+      "Women’s Shoes ",
+      "Shoe Care & Services ",
+      "Outdoor Shoes ",
+      "Functional Shoes",
+    ],
+  },
+  {
+    mainCategory: "Logistic Packaging ",
+    subCategory: [
+      "Mailing Bags ",
+      "Protective & cushioning ",
+      "Drums, Pails & Barrels ",
+      "Packing Ropes ",
+      "Pallets ",
+      "Strapping ",
+      "Crates ",
+      "FIBC Bags ",
+    ],
+  },
+  {
+    mainCategory: "Logistic Packaging ",
+    subCategory: [
+      "Jewelry ",
+      "Eyewear ",
+      "Jewelry Accessories ",
+      "Watches ",
+      "Hair Accessories ",
+      "Eyewear Accessories ",
+    ],
+  },
+];
+
+export const Categoryfeatures = [
+  {
+    featureName: "Shop",
+    items: [
+      {
+        name: "Just Arrived",
+      },
+      {
+        name: "Natural Beauty",
+      },
+      {
+        name: "Best Sellers",
+      },
+      {
+        name: "Best of Beauty",
+      },
+      {
+        name: "Just Arrived",
+      },
+      {
+        name: "Best of Beauty",
+      },
+      {
+        name: "Just Arrived",
+      },
+    ],
+  },
+  {
+    featureName: "Explore",
+    items: [
+      {
+        name: "Hot Now",
+      },
+      {
+        name: "Trending",
+      },
+      {
+        name: "Scouted",
+      },
+      {
+        name: "Just Arrived",
+      },
+    ],
+  },
+];

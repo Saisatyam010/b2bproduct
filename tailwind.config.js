@@ -21,14 +21,17 @@ module.exports = {
         sm: "1rem",
         lg: "2rem",
         xl: "rem",
-        "2xl": "5rem",
-        "3xl": "6rem",
+        "2xl": "3rem",
+        "3xl": "4rem",
       },
     },
     extend: {
       colors: {
         primary: "#3A0F46",
         secondary: "#FFF14E",
+        gray: "#949494",
+        darkgray: "#3F3F3F",
+        greenColor:"#449444"
       },
     },
   },

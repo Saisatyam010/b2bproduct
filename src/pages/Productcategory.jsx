@@ -1,8 +1,10 @@
 import React from "react";
-import Sidebar from "../components/Product Category/Sidebar";
+import ProductCards from "../components/SearchProducts/ProductCards";
 
 const Productcategory = () => {
-  return <Sidebar />;
+  return (
+      <ProductCards />
+  );
 };
 
 export default Productcategory;

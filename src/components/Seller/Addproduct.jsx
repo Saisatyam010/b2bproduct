@@ -1,13 +1,17 @@
-import React from "react";
-import { SellerSizes } from "../Common/Data";
+import React, { useState } from "react";
 import Image1 from "../../assets/images/sellerAdd.png";
+import AddNewproductModal from "./AddNewproductModal";
 const Addproduct = () => {
-  let Sizes = [];
+  const [imageModal, setimageModal] = useState(false);
+  function openModal() {
+    setimageModal(true);
+    document.body.style.overflow = "hidden";
+  }
   return (
     <div className="w-full h-full bg-[#EFEFEF] pb-5">
       <div className="container mx-auto py-5">
-        <div className="flex justify-between items-center shrink">
-          <div className="flex items-center gap-2 flex-1">
+        <div className="flex md:justify-between justify-center items-center shrink flex-wrap gap-y-6 mb-3">
+          <div className="flex md:justify-start justify-center items-center gap-2 flex-1 shrink-0">
             <svg
               width="26"
               height="26"
@@ -20,9 +24,9 @@ const Addproduct = () => {
                 fill="black"
               />
             </svg>
-            <h1 className=" text-3xl font-semibold">Add New Product</h1>
+            <h1 className=" text-3xl font-semibold whitespace-nowrap">Add New Product</h1>
           </div>
-          <div className="flex gap-3 ">
+          <div className="flex md:justify-start justify-center gap-3">
             <button className="flex items-center gap-1 w-1/2 whitespace-nowrap px-4 py-3 rounded-[26px] bg-white border-black border">
               <svg
                 width="20"
@@ -47,36 +51,54 @@ const Addproduct = () => {
             </button>
           </div>
         </div>
-        <div className="flex gap-6 mt-4 w-full items-start shrink-0">
-          <div className="w-full flex flex-col gap-5">
-            <div className="w-full bg-white rounded-[14px] py-5 px-12">
-              <h1 className=" font-semibold text-2xl">General Information</h1>
-              <div className="mt-5 flex flex-col gap-3">
-                <label htmlFor="name" className="text-[#626262] font-medium">
-                  Product Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  id="name"
-                  className=" outline-none border rounded-md w-full py-2 px-4 text-base"
-                />
-              </div>
-              <div className="mt-5 flex flex-col gap-3">
-                <label htmlFor="desc" className="text-[#626262] font-medium">
-                  Product Description
-                </label>
-                <textarea
-                  name=""
-                  required
-                  style={{ resize: "none" }}
-                  id="desc"
-                  cols="2"
-                  rows="5"
-                  className="outline-none border px-4 py-2 rounded-md"
-                ></textarea>
-              </div>
-              <div className=" mt-5 flex justify-between w-full pb-5">
+        <div className="flex md:justify-between justify-center items-center flex-wrap shrink lg:ml-10 ml-0 lg:mt-0 mt-8 gap-y-4">
+          <div className="w-[450px] flex whitespace-nowrap">
+            <div className="w-1/2 border-b-2 border-primary cursor-pointer">
+              <h3 className=" font-medium text-center text-primary text-lg">
+                Main Information
+              </h3>
+            </div>
+            <div className="w-1/2 border-b-2 border-gray cursor-pointer">
+              <h3 className=" font-medium text-center text-gray text-lg">
+                Specification
+              </h3>
+            </div>
+          </div>
+          <div>
+            <h4 className="text-darkgray text-lg">
+              Clothing &gt; <span>Men &gt;</span> Upper winter wear
+            </h4>
+          </div>
+        </div>
+        <div className="flex gap-6 mt-4 w-full flex-wrap lg:flex-nowrap items-start shrink-0">
+          <div className="w-full bg-white rounded-[14px] py-5 md:px-12 px-6">
+            <h1 className=" font-semibold text-2xl">General Information</h1>
+            <div className="mt-5 flex flex-col gap-3">
+              <label htmlFor="name" className="text-[#626262] font-medium">
+                Product Name
+              </label>
+              <input
+                type="text"
+                required
+                id="name"
+                className=" outline-none border border-[#D9D9D9] rounded-md w-full py-2 px-4 text-base"
+              />
+            </div>
+            <div className="mt-5 flex flex-col gap-3">
+              <label htmlFor="desc" className="text-[#626262] font-medium">
+                Product Description
+              </label>
+              <textarea
+                name=""
+                required
+                style={{ resize: "none" }}
+                id="desc"
+                cols="2"
+                rows="5"
+                className="outline-none border border-[#D9D9D9] px-4 py-2 rounded-md"
+              ></textarea>
+            </div>
+            {/* <div className=" mt-5 flex justify-between w-full pb-5">
                 <div className="flex flex-col">
                   <h3 className=" font-semibold">Size</h3>
                   <h4 className=" text-[#9C9C9C] text-sm">
@@ -151,10 +173,8 @@ const Addproduct = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="w-full bg-white rounded-[14px] py-5 px-12">
-              <h1 className=" font-semibold text-2xl">Pricing & Stock</h1>
+              </div> */}
+            <div className="w-full bg-white rounded-[14px] py-5 mt-3">
               <div className="flex justify-between w-full shrink-0">
                 <div className="flex flex-col gap-3">
                   <h3 className="text-[#626262] font-medium">Range</h3>
@@ -163,14 +183,14 @@ const Addproduct = () => {
                       type="text"
                       required
                       placeholder="Start"
-                      className=" outline-none border rounded-md w-full py-2 px-4 text-base"
+                      className=" outline-none border border-[#D9D9D9] rounded-md w-full py-2 px-4 text-base"
                     />
                     <div className="h-[1px] w-[40px] bg-[#B9B9B9]"></div>
                     <input
                       type="text"
                       required
                       placeholder="End"
-                      className=" outline-none border rounded-md w-full py-2 px-4 text-base"
+                      className=" outline-none border border-[#D9D9D9] rounded-md w-full py-2 px-4 text-base"
                     />
                   </div>
                 </div>
@@ -181,14 +201,47 @@ const Addproduct = () => {
                       type="text"
                       required
                       placeholder="Price"
-                      className=" outline-none border rounded-md w-full py-2 px-4 text-base"
+                      className=" outline-none border border-[#D9D9D9] rounded-md w-full py-2 px-4 text-base"
                     />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full flex justify-end mt-3">
+                <button className="py-[2px] px-3 bg-primary font-semibold text-white rounded-md text-sm">
+                  + Add
+                </button>
+              </div>
+              <div className="mt-4 w-full flex gap-4">
+                <div className="w-1/2">
+                  <label
+                    htmlFor="discount"
+                    className="text-gray font-medium mb-2"
+                  >
+                    Discount
+                  </label>
+                  <input
+                    type="text"
+                    id="discount"
+                    className="outline-none border border-[#D9D9D9] w-full px-4 py-2 rounded-md"
+                  />
+                </div>
+                <div className="w-1/2 relative">
+                  <label htmlFor="dtype" className="text-gray font-medium mb-2">
+                    Discount Type
+                  </label>
+                  <input
+                    type="text"
+                    id="dtype"
+                    className="outline-none border border-[#D9D9D9] w-full px-4 py-2 rounded-md"
+                  />
+                  <div className="h-5 w-5 bg-primary rounded-full flex justify-center  items-center absolute bottom-3 right-2 cursor-pointer">
+                    <span className=" text-white rotate-90">&gt;</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="max-w-[38%] w-full flex flex-col gap-5">
+          <div className="md:max-w-[38%] w-full">
             <div className=" w-full bg-white rounded-[14px] py-5 px-8">
               <h1 className="text-2xl font-semibold">Upload Image</h1>
               <div className=" mt-4 aspect-[320/299] rounded-lg border-2 border-[#E2E2E2] max-w-full">
@@ -199,11 +252,22 @@ const Addproduct = () => {
                   loading="lazy"
                 />
               </div>
+              <div className="flex gap-4 mt-6 w-full">
+                <div className="w-1/4 h-[66px] border border-[#E3E3E3]"></div>
+                <div className="w-1/4 h-[66px] border border-[#E3E3E3]"></div>
+                <div className="w-1/4 h-[66px] border border-[#E3E3E3]"></div>
+                <div
+                  className="w-1/4 h-[66px] cursor-pointer  border border-dashed border-[#E3E3E3] flex items-center justify-center text-darkgray text-3xl"
+                  onClick={openModal}
+                >
+                  +
+                </div>
+              </div>
             </div>
-            <div className=" w-full h-[230px] bg-white rounded-[14px] py-5 px-8"></div>
           </div>
         </div>
       </div>
+      {imageModal && <AddNewproductModal setOpen={setimageModal} />}
     </div>
   );
 };
