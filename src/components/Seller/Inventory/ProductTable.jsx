@@ -6,9 +6,9 @@ import { SellerInventoryTableHead } from "../../Common/Data";
 const ProductTable = () => {
   const { products } = useSelector((state) => state.inventory);
   return (
-    <div className="container mx-auto py-1 mb-10 sticky top-0">
+    <div className="container mx-auto py-1 mb-10 overflow-auto">
       <table className="border-[#DBDBDB] border-2 w-full">
-        <tr className="bg-[#F4F4F4] border-[#DBDBDB] border-b-2 sticky top-0 left-0">
+        <tr className="bg-[#F4F4F4] border-[#DBDBDB] border-b-2">
           {SellerInventoryTableHead.map((itm, indx) => (
             <th
               className=" font-medium p-4 text-start whitespace-nowrap"
@@ -26,9 +26,7 @@ const ProductTable = () => {
         </tr>
         {products.map((itm, indx) => (
           <tr className={`border-[#DBDBDB] border-b-2`} key={indx}>
-            <td className="p-4 text-[#505050] text-sm">
-              {itm.status}
-              </td>
+            <td className="p-4 text-[#505050] text-sm">{itm.status}</td>
             <td className="p-4 text-[#505050] text-sm">
               <img src={itm.img} alt="Inventory img" />
             </td>

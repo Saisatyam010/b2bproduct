@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { SellerSidebar } from "../Common/Data";
 import Header from "./Header";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { RiMenuFoldFill } from "react-icons/ri";
 import { RiMenuUnfoldLine } from "react-icons/ri";
+import { SellerSidebar } from "../../constants/Sidebar";
 
 const SellerLayout = () => {
-  const [activeIndex, setactiveIndex] = useState(1);
   const navigate = useNavigate();
   const [Menu, setMenu] = useState(true);
   function handleRoutechange(link) {
@@ -15,7 +14,6 @@ const SellerLayout = () => {
   function handleMenu() {
     setMenu(!Menu);
   }
-
   const navigation = useLocation();
   const { pathname } = navigation;
   return (
@@ -23,7 +21,7 @@ const SellerLayout = () => {
       <div
         className={`relative w-full h-screen ${
           Menu ? "max-w-[90px]" : "max-w-[250px]"
-        }  border-r-[7px] border-primary sticky top-0`}
+        }  border-r-[7px] border-primary sticky top-0 md:block hidden`}
       >
         <button
           className="absolute top-2 right-2 md:block hidden"
@@ -43,9 +41,9 @@ const SellerLayout = () => {
             <div className="flex flex-col">
               {SellerSidebar.map((itm, indx) => (
                 <button
-                  className={`text-start py-5 px-6 outline-none flex items-center gap-2  ${
-                    pathname === itm.link
-                      ? " bg-primary text-white"
+                  className={`text-start py-5 px-6 outline-none flex items-center gap-2 relative ${
+                    pathname.split("/").includes(itm.pgName)
+                      ? " bg-primary text-white sidebar"
                       : "bg-white text-[#8C8C8C] "
                   }  rounded-l-full`}
                   key={indx}

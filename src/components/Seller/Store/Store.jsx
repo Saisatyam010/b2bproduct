@@ -15,7 +15,7 @@ function Store() {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-8 mx-auto container">
+    <div className="grid grid-cols-12 gap-8">
       <div className="col-span-8 mx-auto">
         <div className="py-8">
           <div className="flex justify-center items-center gap-2 text-black font-bold">

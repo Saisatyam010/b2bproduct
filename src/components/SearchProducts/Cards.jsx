@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { HeartIcon, ShareIcon } from "../Common/Icons";
 import Star from "../Singleproduct/Star";
 import "./Cards.css";
-import { BiHeart } from "react-icons/bi";
 const SearchProductCard = () => {
   const products = [
     {
@@ -12,13 +11,7 @@ const SearchProductCard = () => {
       Quality: "Shipping to be negotiated",
       price: "₹395",
       order: "23 orders",
-      imageSrc1:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc2:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc3:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc4:
+      imageSrc:
         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
       Rating: 1.5,
     },
@@ -28,15 +21,8 @@ const SearchProductCard = () => {
       Quality: "Shipping to be negotiated",
       price: "₹395",
       order: "23 orders",
-      imageSrc1:
+      imageSrc:
         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc2:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc3:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc4:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      Rating: 1.5,
     },
     {
       id: 1,
@@ -44,13 +30,7 @@ const SearchProductCard = () => {
       Quality: "Shipping to be negotiated",
       price: "₹395",
       order: "23 orders",
-      imageSrc1:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc2:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc3:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      imageSrc4:
+      imageSrc:
         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
       Rating: 1.5,
     },
@@ -74,7 +54,7 @@ const SearchProductCard = () => {
               <Slider {...sliderSettings}>
                 <div className="bg-[#F0F0F0] p-3">
                   <img
-                    src={product.imageSrc1}
+                    src={product.imageSrc}
                     alt={`Product 1`}
                     loading="lazy"
                     className="w-full h-[208px] object-cover object-center rounded-md"
@@ -82,7 +62,7 @@ const SearchProductCard = () => {
                 </div>
                 <div className="bg-[#F0F0F0] p-3">
                   <img
-                    src={product.imageSrc3}
+                    src={product.imageSrc}
                     alt={`Product 1`}
                     loading="lazy"
                     className="w-full h-[208px] object-cover object-center rounded-md"
@@ -90,7 +70,7 @@ const SearchProductCard = () => {
                 </div>
                 <div className="bg-[#F0F0F0] p-3">
                   <img
-                    src={product.imageSrc4}
+                    src={product.imageSrc}
                     alt={`Product 1`}
                     loading="lazy"
                     className="w-full h-[208px] object-cover object-center rounded-md"
@@ -98,7 +78,7 @@ const SearchProductCard = () => {
                 </div>
                 <div className="bg-[#F0F0F0] p-3">
                   <img
-                    src={product.imageSrc1}
+                    src={product.imageSrc}
                     alt={`Product 1`}
                     className="w-full h-[208px] object-cover object-center rounded-md"
                   />
@@ -120,36 +100,11 @@ const SearchProductCard = () => {
                   </span>
                 </div>
                 <div className="flex gap-1 mt-1">
-                  <input
-                    type="radio"
-                    name=""
-                    id=""
-                    className="h-5 w-5 accent-[#7F172A]"
-                  />
-                  <input
-                    type="radio"
-                    name=""
-                    id=""
-                    className="h-5 w-5 accent-[#E1AEB2]"
-                  />
-                  <input
-                    type="radio"
-                    name=""
-                    id=""
-                    className="h-5 w-5 accent-[#82669F]"
-                  />
-                  <input
-                    type="radio"
-                    name=""
-                    id=""
-                    className="h-5 w-5 accent-[#131313]"
-                  />
-                  <input
-                    type="radio"
-                    name=""
-                    id=""
-                    className="h-5 w-5 accent-[#2D6812]"
-                  />
+                  <div className=" h-5 w-5 rounded-full bg-[#7F172A] focus:border-black cursor-pointer focus:border-4"></div>
+                  <div className=" h-5 w-5 rounded-full bg-[#E1AEB2]"></div>
+                  <div className=" h-5 w-5 rounded-full bg-[#82669F]"></div>
+                  <div className=" h-5 w-5 rounded-full bg-[#131313]"></div>
+                  <div className=" h-5 w-5 rounded-full bg-[#2D6812]"></div>
                 </div>
                 <p className="mt-6 font-medium text-black">{product.order}</p>
                 <div className="flex gap-2">

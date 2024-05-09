@@ -6,6 +6,18 @@
     background: #d3d3d3;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #390E44;
+    background-color: #390e44;
   }
+}
+
+.sidebar:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0 20px 0 0 #3a0f46;
 }
