@@ -6,7 +6,7 @@ import { SellerInventoryTableHead } from "../../Common/Data";
 const ProductTable = () => {
   const { products } = useSelector((state) => state.inventory);
   return (
-    <div className="container mx-auto py-1 mb-10 overflow-auto">
+    <div className="container mx-auto py-1 mb-10 overflow-x-scroll">
       <table className="border-[#DBDBDB] border-2 w-full">
         <tr className="bg-[#F4F4F4] border-[#DBDBDB] border-b-2">
           {SellerInventoryTableHead.map((itm, indx) => (

@@ -25,7 +25,7 @@ const InventoryFilter = () => {
   }
   return (
     <div className="w-full bg-[#F3F3F3] py-3">
-      <div className="container mx-auto flex justify-between items-center flex-wrap">
+      <div className="container mx-auto flex justify-between items-center flex-wrap gap-y-4">
         <div className="flex gap-4 flex-wrap">
           <h4 className="text-[#6C6C6C] font-medium ">Listing Status:</h4>
           <InputField

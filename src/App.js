@@ -5,7 +5,6 @@ import CustomizeStore from "./components/Seller/CustomizeStore";
 import MyStore from "./components/Seller/MyStore";
 import SelectCategory from "./components/Seller/SelectProduct";
 import Homepage from "./pages/Homepage";
-import OrderTrack from "./pages/OrderTrack";
 import OrdersPage from "./pages/OrdersPage";
 import SearchResult from "./pages/SearchResult";
 import SellerAddProduct from "./pages/SellerAddproduct";
@@ -13,6 +12,7 @@ import SellerInventory from "./pages/SellerInventory";
 import SellerStore from "./pages/SellerStore";
 import SingleProduct from "./pages/SingleProduct";
 import Template from "./pages/Template";
+import OrderTrack from "./pages/OrderTrack";
 
 function App() {
   return (

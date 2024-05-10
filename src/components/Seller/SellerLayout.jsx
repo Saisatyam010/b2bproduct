@@ -44,12 +44,12 @@ const SellerLayout = () => {
                   className={`text-start py-5 px-6 outline-none flex items-center gap-2 relative ${
                     pathname.split("/").includes(itm.pgName)
                       ? " bg-primary text-white sidebar"
-                      : "bg-white text-[#8C8C8C] "
+                      : "bg-white text-[#8C8C8C]"
                   }  rounded-l-full`}
                   key={indx}
                   onClick={() => handleRoutechange(itm.link)}
                 >
-                  <span>{itm.icon}</span>
+                  <span className="">{itm.icon}</span>
                   <span className={`${Menu && "hidden"}`}>{itm.routeName}</span>
                 </button>
               ))}

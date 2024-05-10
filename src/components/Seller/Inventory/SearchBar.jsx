@@ -3,9 +3,9 @@ import { IoMdSearch } from "react-icons/io";
 
 const SearchBar = () => {
   return (
-    <div className="container py-3">
-      <div className="flex items-center gap-3 w-full">
-        <div className="max-w-[348px] w-full my-4 relative">
+    <div className="container py-3 my-3">
+      <div className="flex items-center gap-3 w-full flex-wrap">
+        <div className="max-w-[348px] w-full relative">
           <input
             type="text"
             placeholder="Search SKU, Title"

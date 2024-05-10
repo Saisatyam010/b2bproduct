@@ -36,7 +36,7 @@ const Generalinfo = () => {
         </div>
         <InputField id="price" label="Price" placeholder="Price" />
       </div>
-      <div className="w-full flex justify-end mt-3">
+      <div className="w-full flex justify-end my-3">
         <button className="py-[2px] px-3 bg-primary font-semibold text-white rounded-md text-sm">
           + Add
         </button>

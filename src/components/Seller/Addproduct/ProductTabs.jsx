@@ -10,7 +10,7 @@ const ProductTabs = () => {
   return (
     <>
       <div className="flex md:justify-between justify-center items-center flex-wrap shrink lg:ml-10 ml-0 lg:mt-0 mt-8 gap-y-4">
-        <div className="w-[450px] flex whitespace-nowrap">
+        <div className="w-[450px] flex whitespace-nowrap md:mx-0 mx-auto">
           <div className="w-1/2 border-b-2 border-primary cursor-pointer">
             <h3 className=" font-medium text-center text-primary text-lg">
               Main Information

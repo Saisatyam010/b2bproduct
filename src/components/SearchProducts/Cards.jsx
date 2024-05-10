@@ -35,6 +35,7 @@ const SearchProductCard = () => {
       Rating: 1.5,
     },
   ];
+  
   const sliderSettings = {
     dots: true,
     infinite: true,

@@ -16,7 +16,7 @@ const AllCategories = () => {
   }
   return (
     <>
-      <div className="border-[3px] border-[#AFAFAF] rounded-lg h-[600px] mt-2 flex scrollbar">
+      <div className="border-[3px] border-[#AFAFAF] rounded-lg h-[600px] mt-2 flex scrollbar overflow-auto">
         <MainCategory />
         {Category !== null && <SubCategory />}
         {Subcategory !== null && <ProductCategory />}
